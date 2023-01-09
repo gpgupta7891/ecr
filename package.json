@@ -1,0 +1,32 @@
+{
+  "name": "@2iq/aws-ecr-create-repository",
+  "version": "1.0.0",
+  "description": "GitHub action that creates new AWS ECR repository.",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js --license licenses.txt --out lib",
+    "test": "nyc ava",
+    "test:report": "npm test && nyc report --reporter=html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2iq/aws-ecr-create-repository.git"
+  },
+  "author": "2iQ Research GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2iq/aws-ecr-create-repository/issues"
+  },
+  "homepage": "https://github.com/2iq/aws-ecr-create-repository#readme",
+  "dependencies": {
+    "@actions/core": "1.2.6",
+    "@actions/github": "4.0.0",
+    "@aws-sdk/client-ecr": "1.0.0-rc.7"
+  },
+  "devDependencies": {
+    "@2iq/aws-sdk-nock-responses": "0.0.2",
+    "@vercel/ncc": "0.25.1",
+    "ava": "3.13.0",
+    "nyc": "15.1.0"
+  }
+}
