@@ -1,0 +1,21 @@
+name: Create AWS ECR repository
+description: Creates AWS ECR repository if not available
+branding:
+  icon: sun
+  color: red
+inputs:
+  ecr-name:
+    description: >
+      Name of the repository.
+      If not provided, the current git repository name is used.
+    required: false
+outputs:
+  ecr-name:
+    description: The name of the ECR repository. Same as `ecr-name` in inputs.
+  ecr-arn:
+    description: The ARN of the ECR repository.
+  ecr-uri:
+    description: The URI of the ECR repository.
+runs:
+  using: node12
+  main: lib/index.js
